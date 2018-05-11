@@ -1,0 +1,2 @@
+# EOJ
+Easy Online Judge
