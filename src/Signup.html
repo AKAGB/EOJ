@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>EOJ - Easy Online Judge</title>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="login.css">
+        <link rel="icon" href="images/logo.ico">
+        <script>
+        $(function () {
+            var button = $('#submit');
+            button.click(function () {
+                if (!(/^[A-Za-z][\w\_]{5,17}$/).test($('#userId').val())) {
+                    // 用户名匹配6~18位英文字母、数字或下划线，但必须以字母开头
+                    alert('用户名6~18位英文字母、数字或下划线，必须以英文字母开头');
+                    return false;
+                }
+                else if ($('#password').val() != $('#check').val()) {
+                    alert('两次输入密码不相同，请重新输入');
+                    return false;
+                }
+                return true;
+            });
+        });
+
+        </script>
+    </head>
+    <body>
+        <!-- Login Page -->
+        <div class="container panel" id="login">
+            <div class="text-center">
+                <i class="fa fa-toggle-on fa-5x"></i>
+                <h1>EOJ</h1>
+            </div>
+
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="userId">账号</label>
+                    <input type="text" class="form-control" id="userId" placeholder="账号">
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" class="form-control" id="password" placeholder="密码">
+                </div>
+                <div class="form-group">
+                    <label for="password">确认密码</label>
+                    <input type="password" class="form-control" id="check" placeholder="验证密码">
+                </div>
+                <button id="submit" type="submit" class="btn btn-info btn-block">Sign up</button>
+            </form>
+
+        </div>
+    </body>
+</html>

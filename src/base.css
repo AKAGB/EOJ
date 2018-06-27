@@ -5,18 +5,28 @@ body {
 /*
  * 导航栏部分
  */
+header {
+    background-color: #222;
+}
+
  .max-w-1024 {
      max-width: 1024px;
  }
 
 .fa-toggle-off {
     float: left;
-    font-size: 3.6em;
+    font-size: 1.4em;
 }
 
 .navbar-header > a {
     color: #888;
 }
+
+nav {
+    border-radius: 0;
+    border-color: #222 !important;
+}
+
 
 
 /*
