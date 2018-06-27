@@ -1,0 +1,78 @@
+body {
+    background-color: white;
+}
+
+/*
+ * 导航栏部分
+ */
+ .max-w-1024 {
+     max-width: 1024px;
+ }
+
+.fa-toggle-off {
+    float: left;
+    font-size: 3.6em;
+}
+
+.navbar-header > a {
+    color: #888;
+}
+
+
+/*
+ * 页脚
+ */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #101010;
+    color: #9d9d9d;
+    height: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*
+ * 响应式设计
+ */
+
+/*使header部分垂直居中*/
+@media screen and (min-width: 800px) {
+    /* main header内容垂直居中和布局*/
+    .header-center {
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        flex-flow: row;
+    }
+
+    .intro-text {
+        flex: 2;
+    }
+
+    .imgbox {
+        flex: 1;
+    }
+    /*main header 部分结束*/
+
+}
+
+@media screen and (max-width: 800px) {
+    .intro-text {
+        max-width: inherit;
+        width: 100%;
+    }
+
+    /*h2 标题字体设置*/
+    h2 {
+        font-size: 2em;
+    }
+
+    .works {
+        display: block;
+        width: inherit;
+    }
+}
